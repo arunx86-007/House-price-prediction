@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
-loaded_model = joblib.load("C:/Users/manis/OneDrive/Desktop/House-Price-Prediction/models/house_price_model.pkl")
+loaded_model = joblib.load("../models/house_price_model.pkl")
 st.set_page_config(
     page_title="House Price Prediction",
     page_icon="🏠",
