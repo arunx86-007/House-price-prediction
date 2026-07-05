@@ -3,9 +3,12 @@ import joblib
 import pandas as pd
 
 
-MODEL_PATH = r"C:\Users\manis\OneDrive\Desktop\House-Price-Prediction\models\house_price_model.pkl"
+from pathlib import Path
+import joblib
 
-loaded_model = joblib.load(MODEL_PATH)
+loaded_model = joblib.load(
+    Path(__file__).resolve().parent.parent / "models" / "house_price_model.pkl"
+)
 st.set_page_config(
     page_title="House Price Prediction",
     page_icon="🏠",
