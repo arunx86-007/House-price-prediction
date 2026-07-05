@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 
-This project predicts house prices using Machine Learning based on property features such as location, area, number of bedrooms, bathrooms, balconies, furnishing status, and other housing attributes. The project follows a complete end-to-end machine learning workflow, from data preprocessing and model evaluation to deployment using Streamlit.
+This project predicts house prices using Machine Learning based on property features such as location, area, number of bedrooms, bathrooms, balconies, furnishing status, and other housing attributes. The project follows a complete end-to-end machine learning workflow, from data preprocessing and model evaluation to deployment using Streamlit Community Cloud.
 
 ---
 
@@ -16,11 +16,11 @@ The objective of this project is to build an accurate regression model capable o
 
 The dataset contains residential property information collected from multiple cities across India.
 
-**Target Variable**
+### Target Variable
 
 - Amount (in rupees)
 
-**Features**
+### Features
 
 - Location
 - Area
@@ -46,6 +46,7 @@ The dataset contains residential property information collected from multiple ci
 - XGBoost
 - Joblib
 - Streamlit
+- Streamlit Community Cloud
 
 ---
 
@@ -60,7 +61,8 @@ The dataset contains residential property information collected from multiple ci
 - Model Comparison
 - Log Transformation Analysis
 - Hyperparameter Tuning
-- Model Deployment
+- Streamlit Web Application Development
+- Deployment on Streamlit Community Cloud
 
 ---
 
@@ -70,7 +72,7 @@ The dataset contains residential property information collected from multiple ci
 - One-Hot Encoding
 - Feature Scaling
 - Pipeline and ColumnTransformer implementation
-- Train-Test split to prevent data leakage
+- Train-Test Split to prevent data leakage
 
 ---
 
@@ -108,7 +110,7 @@ To reduce the skewness of the target variable, models were trained with and with
 
 ## 🚀 Hyperparameter Tuning
 
-RandomizedSearchCV with 5-fold Cross Validation was used to optimize the XGBoost model.
+RandomizedSearchCV with 5-Fold Cross Validation was used to optimize the XGBoost model.
 
 ### Performance Improvement
 
@@ -136,20 +138,32 @@ The tuned XGBoost model achieved the best predictive performance and was selecte
 
 ## 💻 Streamlit Application
 
-The trained model is deployed using Streamlit, allowing users to enter property details and instantly receive a predicted house price.
+The trained model is deployed using Streamlit, allowing users to enter property details and instantly receive a predicted house price through an interactive web application.
+
+---
+
+## 🌐 Deployment
+
+The application is deployed on **Streamlit Community Cloud** for easy online access.
+
+**Live Demo**
+
+https://house-price-prediction-f6jaaevm7utthtkpecqzfy.streamlit.app/
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 House-Price-Prediction/
-│── data/
-│── notebooks/
-│── models/
-│── app.py
-│── requirements.txt
-│── README.md
+│
+├── app/
+│   └── app.py
+├── data/
+├── models/
+├── notebook/
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -157,20 +171,11 @@ House-Price-Prediction/
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/your-username/House-Price-Prediction.git
-cd House-Price-Prediction
+git clone https://github.com/arunx86-007/House-price-prediction.git
+cd House-price-prediction
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run app/app.py
 ```
-
----
-
-## 📌 Future Improvements
-
-- Deploy on Streamlit Community Cloud
-- Add SHAP for model explainability
-- Experiment with LightGBM and CatBoost
-- Improve feature engineering
 
 ---
 
