@@ -144,3 +144,4 @@ if st.button("Predict House Price"):
     prediction = loaded_model.predict(input_df)
 
     st.success(f"🏠 Estimated House Price: ₹ {prediction[0]:,.0f}")
+    
